@@ -43,7 +43,7 @@ export function loginGoogle() {
       const errorCode = error.code;
       const errorMessage = error.message;
       console.error('SignIn Google', { errorCode, errorMessage });
-      return null;
+      throw new Error(errorMessage)
     });
 }
 
@@ -61,7 +61,7 @@ export function loginGitHub() {
       const errorCode = error.code;
       const errorMessage = error.message;
       console.error('SignIn Github', { errorCode, errorMessage });
-      return null;
+      throw new Error(errorMessage)
     });
 }
 
@@ -80,7 +80,7 @@ export function loginTwitter() {
       const errorCode = error.code;
       const errorMessage = error.message;
       console.error('SignIn Twitter', { errorCode, errorMessage });
-      return null;
+      throw new Error(errorMessage)
     });
 }
 

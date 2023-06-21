@@ -180,7 +180,9 @@
             window.open(
               $remoteConfig.stripe_checkout_url +
                 '?client_reference_id=' +
-                $user.uid,
+                $user.uid +
+                '&prefilled_email=' +
+                $user.email,
               '_blank'
             );
             return;
